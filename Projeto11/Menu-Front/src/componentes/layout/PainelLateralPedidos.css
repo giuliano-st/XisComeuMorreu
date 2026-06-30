@@ -1,0 +1,75 @@
+.painel-lateral {
+    width: 320px;
+    background-color: #f8f9fa;
+    border-left: 1px solid #ddd;
+    padding: 20px;
+    height: calc(100vh - 80px);
+    position: sticky;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.painel-lateral h2 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.lista-rolante-pedidos {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.lista-rolante-pedidos::-webkit-scrollbar {
+    width: 6px;
+}
+.lista-rolante-pedidos::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+.cartao-mini-pedido {
+    background: white;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-left: 4px solid #ccc;
+}
+
+.mini-pedido-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.btn-mais {
+    display: block;
+    width: fit-content;
+    margin: 15px auto 0 auto;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.btn-mais:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.btn-mais:active {
+    transform: scale(0.98);
+}
+
+.cartao-mini-pedido.status-pendente { border-left-color: #ffc107; }
+.cartao-mini-pedido.status-entregue { border-left-color: #28a745; }

@@ -1,0 +1,83 @@
+.formulario{
+
+    width:420px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.grupo-input{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.grupo-input input{
+
+    flex:1;
+
+}
+
+.adicionar-itens-container{
+
+    display:flex;
+
+    gap:10px;
+
+    align-items:center;
+
+}
+
+.adicionar-itens-container select{
+
+    flex:1;
+
+}
+
+.lista-itens-adicionados{
+
+    max-height:180px;
+
+    overflow-y:auto;
+
+    border:1px solid #ddd;
+
+    padding:12px;
+
+    border-radius:8px;
+
+}
+
+.pedido-info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:12px;
+
+    background:#f7f7f7;
+
+    border-radius:8px;
+
+}
+
+.pedido-total{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    padding-top:10px;
+
+}

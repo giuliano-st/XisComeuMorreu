@@ -1,0 +1,144 @@
+.recibo-card {
+    background-color: #fffdeb;
+    border: 1px solid #e0dcb5;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    padding: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 4px;
+}
+
+.recibo-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.recibo-id {
+    font-size: 1.1rem;
+}
+
+.recibo-status {
+    padding: 2px 6px;
+    font-size: 0.8rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.status-pendente { background-color: #ffeeb2; color: #856404; }
+.status-preparando { background-color: #b8daff; color: #004085; }
+.status-pronto { background-color: #c3e6cb; color: #155724; }
+.status-entregue { background-color: #e2e3e5; color: #383d41; }
+.status-cancelado { background-color: #f5c6cb; color: #721c24; }
+
+.recibo-divisor {
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 8px 0;
+    color: #999;
+}
+
+.recibo-itens-titulo {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 6px;
+}
+
+.recibo-lista-itens {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+.recibo-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+}
+
+.item-nome {
+    max-width: 60%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.recibo-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.recibo-acoes {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.select-status-rapido {
+    font-family: inherit;
+    padding: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.grupo-botoes-crud {
+    display: flex;
+    gap: 4px;
+}
+
+.btn-recibo {
+    background: none;
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.btn-recibo:hover {
+    background-color: #f0f0f0;
+}
+
+.btn-menu {
+    display: block;
+    width: fit-content;
+    margin: 15px auto 0 auto;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.btn-menu:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.btn-menu:active {
+    transform: scale(0.98);
+}

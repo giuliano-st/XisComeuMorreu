@@ -1,0 +1,123 @@
+.modal-editar-pedido{
+
+    width:520px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.info-pedido{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.info-pedido div{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:10px;
+
+    background:#f8f8f8;
+
+    border-radius:6px;
+
+}
+
+.lista-itens{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    max-height:220px;
+
+    overflow-y:auto;
+
+}
+
+.linha-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:8px 0;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.total-pedido{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+}
+
+.campo-status{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.campo-status select{
+
+    padding:10px;
+
+}
+
+.botoes-modal{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:12px;
+
+}
+
+.btn-cancelar{
+
+    padding:10px 20px;
+
+}
+
+.btn-salvar{
+
+    padding:10px 20px;
+
+    background:#2ec4b6;
+
+    color:white;
+
+    border:none;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+}
