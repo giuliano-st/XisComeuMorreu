@@ -170,12 +170,15 @@ Frontend
 # 📷 Telas
 
 - Login
+![Tela de Login](Imagens/Login.png)
 - Cardápio
-- Sacola
+![Tela de Cardápio](Imagens/Cardapio.png)
 - Meus Pedidos
+![Tela dos Meus Pedidos](Imagens/MeusPedidos.png)
 - Administração de Produtos
+![Tela de Administração de Produtos](Imagens/AdministracaoProdutos.png)
 - Administração de Pedidos
-
+![Tela de Administração de Pedidos](Imagens/AdministracaoPedidos.png)
 *(Inserir screenshots futuramente)*
 
 ---
@@ -183,6 +186,7 @@ Frontend
 # 👨‍💻 Autor
 
 - Giuliano Sallin Trevisan
+- Herysson Rodrigues Figueiredo (Projeto Base)
 ---
 
 # 📄 Licença
