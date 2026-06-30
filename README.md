@@ -170,6 +170,7 @@ Frontend
 # 📷 Telas
 
 - Login
+![Tela de Login](Imagens/Login.png)
 - Cardápio
 - Sacola
 - Meus Pedidos
@@ -183,6 +184,7 @@ Frontend
 # 👨‍💻 Autor
 
 - Giuliano Sallin Trevisan
+- Herysson Rodrigues Figueiredo (Projeto Base)
 ---
 
 # 📄 Licença
