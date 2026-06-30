@@ -1,0 +1,205 @@
+/* Layout Geral e Fundo em Tela Cheia */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    /* Um gradiente moderno e suave para o fundo completo */
+    background: linear-gradient(135deg, #f4f7f6 0%, #e2ebf0 100%);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.login-overlay-main {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modais Modernos */
+.login-modal-main {
+    width: 100%;
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 20px 48px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    text-align: center;
+}
+
+.login-modal-main h2, .modal-cadastro-content h2 {
+    color: #2b2d42;
+    font-size: 24px;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+/* Modal de Cadastro (Overlay fixo) */
+.modal-cadastro-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(43, 45, 66, 0.6); /* Fundo escuro suave */
+    backdrop-filter: blur(4px); /* Efeito de desfoque no fundo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.modal-cadastro-content {
+    background: #ffffff;
+    padding: 35px 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 480px;
+    text-align: left;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Formulários e Inputs */
+.formulario-login-container, .form-cadastro-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    text-align: left;
+}
+
+.form-group-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4a5568;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.form-input-field, .form-select-field {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    background-color: #fff;
+    font-size: 15px;
+    color: #334155;
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box;
+}
+
+/* Efeito de foco nos Inputs */
+.form-input-field:focus, .form-select-field:focus {
+    outline: none;
+    border-color: #2ec4b6;
+    box-shadow: 0 0 0 3px rgba(46, 196, 182, 0.15);
+    background-color: #f8fafc;
+}
+
+/* Botões Estilizados */
+.login-botoes-container, .botoes-modal-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+/* Botão Principal (Entrar / Cadastrar) */
+.btn-entrar-submit, .btn-cadastrar-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: #2ec4b6;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(46, 196, 182, 0.15);
+}
+
+.btn-entrar-submit:hover, .btn-cadastrar-submit:hover {
+    background-color: #25a195;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(46, 196, 182, 0.25);
+}
+
+.btn-entrar-submit:active, .btn-cadastrar-submit:active {
+    transform: translateY(0);
+}
+
+/* Botão Secundário / Voltar (Estilo Outline para contraste) */
+.btn-cancelar {
+    width: 100%;
+    padding: 13px;
+    background-color: transparent;
+    color: #64748b;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-cancelar:hover {
+    background-color: #f1f5f9;
+    color: #334155;
+    border-color: #94a3b8;
+}
+
+/* Botão Cancelar do Modal */
+.btn-cadastrar-cancelar {
+    width: 100%;
+    padding: 13px;
+    background-color: #e2e8f0;
+    color: #475569;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-cadastrar-cancelar:hover {
+    background-color: #cbd5e1;
+    color: #1e293b;
+}
+
+/* Flexbox para os botões lado a lado no modal de cadastro */
+.botoes-modal-flex {
+    flex-direction: row;
+    gap: 12px;
+}
+
+/* Link de Cadastro */
+.cadastro-link-container {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.btn-link-cadastro {
+    background: none;
+    border: none;
+    color: #2ec4b6;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0 2px;
+    transition: color 0.2s ease;
+}
+
+.btn-link-cadastro:hover {
+    color: #25a195;
+    text-decoration: underline;
+}

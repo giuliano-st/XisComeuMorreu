@@ -121,3 +121,17 @@
     cursor:pointer;
 
 }
+
+.modal-editar-pedido hr {
+    margin: 4px 0;
+}
+
+.modal-editar-pedido h2,
+.modal-editar-pedido h3,
+.modal-editar-pedido label {
+    margin: 0;
+}
+
+.modal-editar-pedido * {
+    box-sizing: border-box;
+}

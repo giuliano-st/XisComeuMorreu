@@ -112,43 +112,43 @@ const Menu = () => {
 
                 <h1>Cardápio</h1>
 
-                {modalAberto && (
-                    <div className="overlay">
-                        <div className="modal">
-                            <button className="fechar" onClick={fecharModal}>X</button>
+                {modalAberto && tipoAcao === "cadastrar" && (
+                    <ModalFormularioProduto
+                        aberto={true}
+                        titulo="Cadastrar Novo Produto"
+                        onFechar={fecharModal}
+                        onSubmit={handleCadastro}
+                    />
+                )}
 
-                            <ModalFormularioProduto
-                                aberto={modalAberto && tipoAcao === "cadastrar"}
-                                titulo="Cadastrar Novo Produto"
-                                onFechar={fecharModal}
-                                onSubmit={handleCadastro}
-                            />
+                {modalAberto && tipoAcao === "editar" && (
+                    <ModalFormularioProduto
+                        aberto={true}
+                        titulo={`Editar: ${produtoSelecionado?.nome}`}
+                        produto={produtoSelecionado}
+                        onFechar={fecharModal}
+                        onSubmit={handleEditar}
+                    />
+                )}
 
-                            <ModalFormularioProduto
-                                aberto={modalAberto && tipoAcao === "editar"}
-                                titulo={`Editar: ${produtoSelecionado?.nome}`}
-                                produto={produtoSelecionado}
-                                onFechar={fecharModal}
-                                onSubmit={handleEditar}
-                            />
+                {modalAberto && tipoAcao === "detalhes" && (
+                    <ModalDetalhesProduto
+                        aberto={true}
+                        produto={produtoSelecionado}
+                        onFechar={fecharModal}
+                    />
+                )}
 
-                            <ModalDetalhesProduto
-                                aberto={modalAberto && tipoAcao === "detalhes"}
-                                produto={produtoSelecionado}
-                                onFechar={fecharModal}
-                            />
-
-                            <ModalConfirmacao
-                                aberto={modalAberto && tipoAcao === "deletar"}
-                                titulo="Excluir Produto"
-                                mensagem={`Tem certeza que deseja excluir ${produtoSelecionado?.nome}?`}
-                                textoConfirmar="Sim, excluir"
-                                carregando={isDeletando}
-                                onConfirmar={handleConfirmarDelecao}
-                                onCancelar={fecharModal}
-                            />
-                        </div>
-                    </div>
+                {modalAberto && tipoAcao === "deletar" && (
+                    <ModalConfirmacao
+                        aberto={true}
+                        titulo="Excluir Produto"
+                        mensagem={`Tem certeza que deseja excluir ${produtoSelecionado?.nome}?`}
+                        textoConfirmar="Sim, excluir"
+                        carregando={isDeletando}
+                        onConfirmar={handleConfirmarDelecao}
+                        onCancelar={fecharModal}
+                    />
                 )}
 
                 <section className="grade-cartoes">

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useClienteDados } from "../hooks/useClienteDados";
 import { useClienteMutate } from "../hooks/useClienteMutate";
 import { Navbar } from "../componentes/layout/Navbar.tsx";
+import "./Login.css";
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -94,16 +95,16 @@ const Login = () => {
     return (
         <>
             <Navbar />
-            <main className="container">
-                <div className="overlay" style={{ position: "relative", minHeight: "60vh", background: "none" }}>
-                    <div className="modal" style={{ position: "relative", top: 0, left: 0, transform: "none", margin: "0 auto" }}>
+            <main className="login-container">
+                <div className="login-overlay-main">
+                    <div className="login-modal-main">
                         <h2>Acessar o Sistema</h2>
 
-                        <form onSubmit={handleSubmit} className="formulario-produto">
-                            <div className="detalhes-info" style={{ display: "flex", flexDirection: "column", gap: "15px", textAlign: "left" }}>
+                        <form onSubmit={handleSubmit}>
+                            <div className="formulario-login-container">
                                 <div>
-                                    <label htmlFor="email" style={{ fontWeight: "bold", display: "block", marginBottom: "5px" }}>
-                                        E-mail:
+                                    <label htmlFor="email" className="form-group-label">
+                                        E-mail
                                     </label>
                                     <input
                                         type="email"
@@ -112,13 +113,13 @@ const Login = () => {
                                         onChange={(e) => setEmail(e.target.value)}
                                         placeholder="seu-email@restaurante.com"
                                         required
-                                        style={{ width: "100%", padding: "8px", borderRadius: "4px", border: "1px solid #ccc" }}
+                                        className="form-input-field"
                                     />
                                 </div>
 
                                 <div>
-                                    <label htmlFor="senha" style={{ fontWeight: "bold", display: "block", marginBottom: "5px" }}>
-                                        Senha:
+                                    <label htmlFor="senha" className="form-group-label">
+                                        Senha
                                     </label>
                                     <input
                                         type="password"
@@ -127,13 +128,13 @@ const Login = () => {
                                         onChange={(e) => setSenha(e.target.value)}
                                         placeholder="Sua senha"
                                         required
-                                        style={{ width: "100%", padding: "8px", borderRadius: "4px", border: "1px solid #ccc" }}
+                                        className="form-input-field"
                                     />
                                 </div>
                             </div>
 
-                            <div className="botoes-alerta" style={{ marginTop: "25px" }}>
-                                <button type="submit" className="btn-confirmar-delete" style={{ backgroundColor: "#2ec4b6" }}>
+                            <div className="login-botoes-container">
+                                <button type="submit" className="btn-entrar-submit">
                                     Entrar
                                 </button>
                                 <button type="button" className="btn-cancelar" onClick={() => navigate("/")}>
@@ -142,13 +143,12 @@ const Login = () => {
                             </div>
                         </form>
 
-                        {/* Link para abrir o Modal de Cadastro */}
-                        <div style={{ marginTop: "20px", fontSize: "14px" }}>
+                        <div className="cadastro-link-container">
                             Não tem uma conta?{" "}
                             <button
                                 type="button"
                                 onClick={() => setIsModalAberto(true)}
-                                style={{ background: "none", border: "none", color: "#2ec4b6", cursor: "pointer", fontWeight: "bold", textDecoration: "underline" }}
+                                className="btn-link-cadastro"
                             >
                                 Cadastre-se aqui
                             </button>
@@ -157,54 +157,54 @@ const Login = () => {
                 </div>
 
                 {isModalAberto && (
-                    <div className="overlay" style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", backgroundColor: "rgba(0,0,0,0.5)", display: "flex", justifyContent: "center", alignItems: "center", zIndex: 1000 }}>
-                        <div className="modal" style={{ background: "white", padding: "30px", borderRadius: "8px", width: "90%", maxWidth: "450px", textAlign: "left" }}>
+                    <div className="modal-cadastro-overlay">
+                        <div className="modal-cadastro-content">
                             <h2>Criar Nova Conta</h2>
-                            <form onSubmit={handleCadastrarCliente} style={{ display: "flex", flexDirection: "column", gap: "15px", marginTop: "15px" }}>
+                            <form onSubmit={handleCadastrarCliente} className="form-cadastro-flex">
 
                                 <div>
-                                    <label style={{ fontWeight: "bold", display: "block", marginBottom: "5px" }}>Nome:</label>
+                                    <label className="form-group-label">Nome</label>
                                     <input
                                         type="text"
                                         value={novoNome}
                                         onChange={(e) => setNovoNome(e.target.value)}
                                         placeholder="Seu nome completo"
                                         required
-                                        style={{ width: "100%", padding: "8px", borderRadius: "4px", border: "1px solid #ccc" }}
+                                        className="form-input-field"
                                     />
                                 </div>
 
                                 <div>
-                                    <label style={{ fontWeight: "bold", display: "block", marginBottom: "5px" }}>E-mail:</label>
+                                    <label className="form-group-label">E-mail</label>
                                     <input
                                         type="email"
                                         value={novoEmail}
                                         onChange={(e) => setNovoEmail(e.target.value)}
                                         placeholder="seu-email@exemplo.com"
                                         required
-                                        style={{ width: "100%", padding: "8px", borderRadius: "4px", border: "1px solid #ccc" }}
+                                        className="form-input-field"
                                     />
                                 </div>
 
                                 <div>
-                                    <label style={{ fontWeight: "bold", display: "block", marginBottom: "5px" }}>Endereço de Entrega:</label>
+                                    <label className="form-group-label">Endereço de Entrega</label>
                                     <input
                                         type="text"
                                         value={novoEndereco}
                                         onChange={(e) => setNovoEndereco(e.target.value)}
                                         placeholder="Rua, Número, Bairro"
                                         required
-                                        style={{ width: "100%", padding: "8px", borderRadius: "4px", border: "1px solid #ccc" }}
+                                        className="form-input-field"
                                     />
                                 </div>
 
                                 <div>
-                                    <label style={{ fontWeight: "bold", display: "block", marginBottom: "5px" }}>Preferência de Pagamento:</label>
+                                    <label className="form-group-label">Preferência de Pagamento</label>
                                     <select
                                         value={novaPreferencia}
                                         onChange={(e) => setNovaPreferencia(e.target.value)}
                                         required
-                                        style={{ width: "100%", padding: "8px", borderRadius: "4px", border: "1px solid #ccc", background: "white" }}
+                                        className="form-select-field"
                                     >
                                         <option value="">Selecione uma opção</option>
                                         <option value="Cartão de Crédito">Cartão de Crédito</option>
@@ -214,11 +214,11 @@ const Login = () => {
                                     </select>
                                 </div>
 
-                                <div style={{ display: "flex", gap: "10px", marginTop: "10px" }}>
-                                    <button type="submit" style={{ flex: 1, padding: "10px", backgroundColor: "#2ec4b6", color: "white", border: "none", borderRadius: "4px", cursor: "pointer", fontWeight: "bold" }}>
+                                <div className="botoes-modal-flex">
+                                    <button type="submit" className="btn-cadastrar-submit">
                                         Cadastrar
                                     </button>
-                                    <button type="button" onClick={() => setIsModalAberto(false)} style={{ flex: 1, padding: "10px", backgroundColor: "#6c757d", color: "white", border: "none", borderRadius: "4px", cursor: "pointer" }}>
+                                    <button type="button" onClick={() => setIsModalAberto(false)} className="btn-cadastrar-cancelar">
                                         Cancelar
                                     </button>
                                 </div>

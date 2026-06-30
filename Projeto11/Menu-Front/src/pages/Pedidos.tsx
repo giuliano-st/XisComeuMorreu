@@ -8,6 +8,7 @@ import { FormularioPedido } from "../componentes/FormularioPedido.tsx";
 import { CartaoPedido } from "../componentes/CartaoPedido.tsx";
 import { useNavigate } from "react-router-dom";
 import {ModalEditarPedido} from "../componentes/ModalEditarPedido.tsx";
+import "./Pedidos.css";
 
 const Pedidos = () => {
     const { data } = usePedidoDados();
